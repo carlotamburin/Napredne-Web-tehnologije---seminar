@@ -1,4 +1,4 @@
-# seminar
+# Seminar iz naprednih web tehnologija u Sails.js
 
 a [Sails v1](https://sailsjs.com) application
 
