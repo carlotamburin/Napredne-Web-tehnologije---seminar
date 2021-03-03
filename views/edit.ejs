@@ -1,0 +1,44 @@
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/articles/list">Articles</a></li>
+    <li class="breadcrumb-item active">Edit</li>
+</ol>
+
+ 
+
+<h1 class="display-4">Edit article</h1>
+<form method="post" action="/articles/update/<%= article.id %>">
+    <input type="hidden" name="_csrf" value="<%= _csrf %>" />
+
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" name="title" class="form-control" value="<%= article.title %>">
+    </div>
+
+    <div class="form-group">
+        <label for="description">Description</label>
+        <textarea name="description" class="form-control"><%= article.description %></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="manifacturer">Manifacturer</label>
+        <input type="text" name="manifacturer" class="form-control" value="<%= article.manifacturer %>">
+    </div>
+
+    <div class="form-group">
+        <label for="foundingYear">Founding Year</label>
+        <input type="number" name="foundingYear" class="form-control" value="<%= article.foundingYear %>">
+    </div>
+
+    <div class="form-group">
+        <label for="originCountry">Origin Country</label>
+        <input type="text" name="originCountry" class="form-control" value="<%= article.originCountry %>">
+    </div>
+
+    <div class="form-group">
+        <label for="price">Price (Euros)</label>
+        <input type="number" name="price" class="form-control" value="<%= article.price %>">
+    </div>
+
+    <input type="submit" value="Submit" class="btn btn-primary">
+</form>
